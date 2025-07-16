@@ -1,0 +1,45 @@
+Documentacion Api de productos 
+-------------------------------
+
+DIRECCIONES DE CONSUMO DE LA API
+-----------------------------------
+localhost/api/products          (GET)devuelve todos los productos.
+
+localhost/api/products/:id      (GET)devuelve el producto con el ID indicado.
+
+localhost/api/products/create   (POST)recibe en el cuerpo (body), VER DETALLE EN ESTRUCTURA DE DATOS, de la petición la información sobre el nuevo producto para ser guardado en el servicio de datos en la nube.
+
+localhost/api/products/:id      (DELETE)elimina el producto con el ID indicado
+
+localhost/auth/login            (POST)recibe las credenciales de usuario en el cuerpo (body) de la petición y devuelve el Bearer token si son válidas o un error de autenticación en caso contrario.
+
+ESTRUCTURA DE DATOS
+----------------------
+
+producto
+---------
+    nombre:"",
+    descripcion:"",
+    categoria: "",
+    precio:0.00,
+    stock:0
+
+login
+-------
+    usuario:"",
+    passwd:""
+
+INSTALACION
+-------------
+Dependencias necesarias
+------------------------
+- express
+- firebase
+- cors
+- body-parser
+- dotenv
+
+Ejecución
+----------
+Para correr el server debe ejecutar en la linea de comandos :
+ npm run start

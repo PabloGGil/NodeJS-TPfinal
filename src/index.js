@@ -6,6 +6,7 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 import productoRoute from "./rutas/producto.route.js";
+import autorizacionRoute from "./rutas/autorizacion.route.js";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -49,6 +50,7 @@ app.get("/", (req, res) => {
 
 // rutas de producto 
 app.use("/api/products",productoRoute); 
+app.use("/auth/login",autorizacionRoute);
 
 // ---------- manejo de errores --------------------
 app.use((req, res, next) => { res.status(404).send('Recurso no encontrado o ruta inválida'); });

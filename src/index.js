@@ -6,7 +6,7 @@ import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 import productoRoute from "./rutas/producto.route.js";
-import autorizacionRoute from "./rutas/autorizacion.route.js";
+import autorizacionRoute from "./rutas/autenticacion.route.js";
 
 
 const __filename = fileURLToPath(import.meta.url);

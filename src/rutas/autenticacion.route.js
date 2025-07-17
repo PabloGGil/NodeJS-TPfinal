@@ -1,6 +1,6 @@
 import express from 'express'; 
-import { login } from '../controladores/autenticacion.controller.js'; 
+import autenticaController from '../controladores/seguridad.controller.js'; 
 const router = express.Router(); 
-router.post('/', login); 
+router.post('/login', autenticaController.login); 
 
 export default router;

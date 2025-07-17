@@ -14,7 +14,7 @@ export const generaToken = (userData) => {
 
 export const verificaToken=(token)=>{
     try{
-        const decript=jwt.verify(token,jwt_secret);
+        const decript=jwt.verify(token,secret_key);
         return {valido:true,decript};
     }catch(error){
         return {valido:false,message:error.message};

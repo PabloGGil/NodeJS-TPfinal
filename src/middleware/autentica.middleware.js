@@ -6,9 +6,10 @@ const secret_key = process.env.JWT_SECRET_KEY;
 export const autenticacion = (req, res, next) => { 
     console.log(req.headers)
     const token = req.headers['authorization'].split(" ")[1]; 
-    console.log(token)
+    console.log("token middleware auth: "+token)
     if (!token) return res.sendStatus(401); 
     const tokenStat=verificaToken(token);
+    console.log(tokenStat)
     if(!tokenStat.valido) return res.sendStatus(403);
     console.log(tokenStat.decript)
     req.user=tokenStat.decript;
